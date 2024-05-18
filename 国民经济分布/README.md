@@ -28,5 +28,6 @@
 
 
 ## 参考资料
-> [1] [数学建模之聚类分析（推荐）](https://blog.csdn.net/qq_40605167/article/details/100045676?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171599989016777224444236%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=171599989016777224444236&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-100045676-null-null.142^v100^pc_search_result_base6&utm_term=%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90%E4%BE%8B%E9%A2%98&spm=1018.2226.3001.4187) 
-> [2] 黄秋桥，姜楠楠，程猛. 2007年江苏省十三大市经济建设主要指标聚类分析[EB/OL]. 北京：中国科技论文在线 [2009-11-13]. https://www.paper.edu.cn/releasepaper/content/200911-364.
+[1] [数学建模之聚类分析（推荐）](https://blog.csdn.net/qq_40605167/article/details/100045676?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171599989016777224444236%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=171599989016777224444236&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-100045676-null-null.142^v100^pc_search_result_base6&utm_term=%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90%E4%BE%8B%E9%A2%98&spm=1018.2226.3001.4187) 
+
+[2] 黄秋桥，姜楠楠，程猛. 2007年江苏省十三大市经济建设主要指标聚类分析[EB/OL]. 北京：中国科技论文在线 [2009-11-13]. https://www.paper.edu.cn/releasepaper/content/200911-364.

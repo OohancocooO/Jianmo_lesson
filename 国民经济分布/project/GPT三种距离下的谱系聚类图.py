@@ -174,7 +174,7 @@ canberra_dist = pdist(df_scaled, metric="canberra")
 def plot_dendrogram(dist_matrix, method, title):
     Z = linkage(dist_matrix, method="ward")
     plt.figure(figsize=(10, 8))
-    dendrogram(Z, labels=df.index.tolist(), leaf_rotation=90)
+    dendrogram(Z, labels=df.index.tolist(), leaf_rotation=30)
     plt.title(title)
     plt.xlabel("City")
     plt.ylabel("Distance")

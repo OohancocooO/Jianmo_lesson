@@ -166,7 +166,7 @@ Z = linkage(df_standardized, method="ward")
 
 # 绘制谱系聚类图
 plt.figure(figsize=(10, 7))
-dendrogram(Z, labels=cities.values, leaf_rotation=90)
+dendrogram(Z, labels=cities.values, leaf_rotation=30)
 plt.title("Dendrogram for Jiangsu Province Economic Data (2007)")
 plt.xlabel("City")
 plt.ylabel("Euclidean Distance")

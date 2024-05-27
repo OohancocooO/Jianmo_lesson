@@ -28,7 +28,7 @@ df = pd.DataFrame(data)
 new_customer = np.array([53, 1, 9, 18, 50, 1.20, 2.02, 3.58])
 
 # 去除高度相关的变量，假设我们选择去除X7
-df_reduced = df.drop(columns=["X7"])
+df_reduced = df.drop(columns=["X8"])
 
 # 更新新客户数据
 new_customer_reduced = np.array([53, 1, 9, 18, 50, 1.20, 3.58])

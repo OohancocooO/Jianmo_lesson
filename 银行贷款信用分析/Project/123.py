@@ -40,7 +40,7 @@ def mahalanobis_distance(new_customer, data, labels):
     cov_good = np.cov(good_customers, rowvar=False)
     cov_bad = np.cov(bad_customers, rowvar=False)
 
-    inv_cov_good = np.linalg.inv(cov_good)
+    inv_cov_good = np.linalg.pinv(cov_good)
     inv_cov_bad = np.linalg.pinv(cov_bad)
 
     dist_good = mahalanobis(new_customer, mean_good, inv_cov_good)

@@ -132,3 +132,5 @@ r表示一个潜伏者平均每天感染易感者的人数
 \end{aligned}
 
 ![可视化展示](/自主学习/传染病/可视化/武汉疫情.png)
+
+参考文献：https://blog.csdn.net/qq_36714950/article/details/138058867

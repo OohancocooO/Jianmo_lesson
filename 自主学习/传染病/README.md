@@ -109,13 +109,9 @@ r表示一个感染者平均每天感染易感者的人数
 
 \begin{aligned}
 \frac{dS}{dt} & = -\frac{rSI}{N} \\
-
 \frac{dE}{dt} & = \frac{rSI}{N} - \alpha E \\
-
 \frac{dI}{dt} & = \alpha E - \mu I \\
-
 \frac{dR}{dt} & = \mu I
-
 \end{aligned}
 
 ![可视化展示](/自主学习/传染病/可视化/seir.png)
@@ -153,15 +149,10 @@ r表示一个潜伏者平均每天感染易感者的人数
 
 \begin{aligned}
 \frac{dS}{dt} & = -\frac{rSE}{N} \\
-
 \frac{dE}{dt} & = \frac{rSE}{N} - \alpha E - \pi E \\
-
 \frac{dI}{dt} & = \alpha E - \mu I \\
-
 \frac{dJ}{dt} & = \pi I \\
-
 \frac{dR}{dt} & = \pi E + \mu I
-
 \end{aligned}
 
 ![可视化展示](/自主学习/传染病/可视化/seijr.png)
@@ -201,13 +192,9 @@ r表示一个潜伏者平均每天感染易感者的人数
 
 \begin{aligned}
 \frac{dS}{dt} & = -\frac{rSE}{N} \\
-
 \frac{dE}{dt} & = \frac{rSE}{N} - \alpha E - \pi E \\
-
 \frac{dI}{dt} & = \alpha E - \mu I - \omega I \\
-
 \frac{dJ}{dt} & = \pi I \\
-
 \frac{dR}{dt} & = \pi E + \mu I \\
 \frac{dD}{dt} & = \omega I
 

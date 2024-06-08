@@ -15,26 +15,7 @@
 ## 问题：制定生产计划，使得每天的获利最大
 
 设 x1 表示第一种产品的生产数量，x2 表示第二种产品的生产数量。建立线性回归模型：
-
-\begin{aligned}
-\text{maximize} \quad & z = 72x_1 + 64x_2 \\
-\text{subject to} \quad & \begin{pmatrix}
-1 & 1 \\
-12 & 8 
-\end{pmatrix}
-\begin{pmatrix}
-x_1 \\
-x_2 
-\end{pmatrix}
-\leq
-\begin{pmatrix}
-50 \\
-480 
-\end{pmatrix}, \\
-& 0 \leq x_1 \leq \frac{1000}{3}, \\
-& 0 \leq x_2 < +\infty.
-\end{aligned}
-
+![可视化展示](/自主学习/传染病/可视化/3.png)
 
 编写代码可以得到最优解 x1= 20， x2 = 30，最大的收益为 3360元》
 
@@ -42,6 +23,7 @@ x_2
 
 设买 x3
 
+![可视化展示](/自主学习/传染病/可视化/4.png)
 
 编写代码可解得：最优值: -3490.0
 

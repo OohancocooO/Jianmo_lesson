@@ -1,0 +1,49 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 数据
+fertilizer = np.array([0, 34, 67, 101, 135, 202, 259, 336, 404, 471])
+yield_ = np.array(
+    [15.18, 21.36, 25.72, 32.29, 34.03, 39.45, 43.15, 43.46, 40.83, 30.75]
+)
+
+# 回归系数
+a = -3.395e-4
+b = 0.197
+c = 14.741
+
+# 置信区间
+a_ci = 0.0000406
+b_ci = 0.0195
+c_ci = 1.7503
+
+# 生成x值
+x = np.linspace(0, 471, 500)
+
+# 回归曲线
+y = a * x**2 + b * x + c
+
+# 置信区间上下界
+y_lower = (a - a_ci) * x**2 + (b - b_ci) * x + (c - c_ci)
+y_upper = (a + a_ci) * x**2 + (b + b_ci) * x + (c + c_ci)
+
+# 创建图形
+plt.figure(figsize=(10, 6))
+
+# 绘制回归曲线
+plt.plot(fertilizer, yield_, "o", label="Data points")
+plt.plot(x, y, "b-", label="Regression curve")
+
+# 绘制置信区间
+plt.plot(x, y_lower, color="#FF8899", label="95% Confidence interval")
+plt.plot(x, y_upper, color="#FF8899")
+plt.fill_between(x, y_lower, y_upper, color="#FFDD88", alpha=0.5)
+
+# 添加标签和标题
+plt.xlabel("Fertilizer amount")
+plt.ylabel("Yield")
+plt.title("Regression Curve with 95% Confidence Interval")
+plt.legend()
+
+# 显示图形
+plt.show()

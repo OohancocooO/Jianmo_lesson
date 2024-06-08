@@ -37,7 +37,7 @@ I & = N \left( 1 - \frac{M}{r} \right)
 
 # 3. 基本再生数 basic reproductive number
 这里，从SIS模型中引出了一个概念，就是基本再生数，其定义为：
-R_0 = \frac{r}{\pi}
+$$ R_0 = \frac{r}{\pi} $$
 r 表示感染的速率，u 表示治愈的速率
 
 # 4. SIR模型

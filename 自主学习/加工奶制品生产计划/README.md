@@ -17,9 +17,8 @@
 设 x1 表示第一种产品的生产数量，x2 表示第二种产品的生产数量。建立线性回归模型：
 
 \begin{aligned}
-\text{max } z & = 72x_1 + 64x_2 \\
-\text{s.t.} \\
-& \begin{pmatrix}
+\text{maximize} \quad & z = 72x_1 + 64x_2 \\
+\text{subject to} \quad & \begin{pmatrix}
 1 & 1 \\
 12 & 8 
 \end{pmatrix}
@@ -33,7 +32,7 @@ x_2
 480 
 \end{pmatrix}, \\
 & 0 \leq x_1 \leq \frac{1000}{3}, \\
-& 0 \leq x_2 \leq +\infty.
+& 0 \leq x_2 < +\infty.
 \end{aligned}
 
 

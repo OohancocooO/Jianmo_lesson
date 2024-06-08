@@ -16,79 +16,19 @@
 
 设 x1 表示第一种产品的生产数量，x2 表示第二种产品的生产数量。建立线性回归模型：
 
-\max z = 72x_1 + 64x_2
+目标函数:
 
-\begin{cases}
-\begin{bmatrix}
-1 & 1 \\
-12 & 8 
-\end{bmatrix}
-\begin{bmatrix}
-x_1 \\
-x_2 
-\end{bmatrix}
-\leq
-\begin{bmatrix}
-50 \\
-480 
-\end{bmatrix}
+\[ \max \quad z = 72c_1 + 64c_2 \]
 
-0 \leq
-\begin{bmatrix}
-x_1 \\
-x_2 
-\end{bmatrix}
-\leq
-\begin{bmatrix}
-1000/3 \\
-+\infty 
-\end{bmatrix}
-
-\end{cases}
+约束条件:
+\[ \text{s.t.} \quad 50c_1 + 480c_2 \leq 1000 \]
+\[ 3c_1 \leq 3 \]
 
 编写代码可以得到最优解 x1= 20， x2 = 30，最大的收益为 3360元》
 
 ## 问题：35元可以买到 1 桶牛奶，买吗？若买，每天最多买多少？
 
 设买 x3
-
-\max z = 72x_1 + 64x_2 - 35x_3
-
-
-
-约束条件如下：
-
-\begin{align*}
-\begin{bmatrix}
-    1 & 1 & -1 \\
-    12 & 8 & 0 \\
-\end{bmatrix}
-\begin{bmatrix}
-    x_1 \\
-    x_2 \\
-    x_3 \\
-\end{bmatrix}
-& \leq
-\begin{bmatrix}
-    50 \\
-    480 \\
-\end{bmatrix} \\
-\end{align*}
-
-
-$$
-0 \leq 
-\begin{bmatrix}
-    x_1 \\
-    x_2 \\
-    x_3 \\
-\end{bmatrix}
-\leq
-\begin{bmatrix}
-   +∞ \\
-   +∞ \\
-   +∞ \\
-\end{bmatrix}
 
 
 编写代码可解得：最优值: -3490.0
@@ -109,7 +49,6 @@ $$
 
 目标函数变为
 
-\max z = 90x_1 + 64x_2 
 
 再次求解
 

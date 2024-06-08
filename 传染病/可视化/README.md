@@ -31,4 +31,5 @@ d I & =\frac{r S I}{N}-\mu I
 \end{aligned}
 
 ![可视化展示](/传染病/可视化/sis.png)
-I = N ( 1 - \frac { M } { r } )
+
+I=N(1−Mr)I = N ( 1 - \frac { M } { r } )

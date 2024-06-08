@@ -12,11 +12,12 @@ N表示人口总数
 r表示一个感染者平均每天感染易感者的人数
 
 那么每天易感者和感染者的数量变化为
+$$
 \begin{aligned}
 d S & =\frac{-r S I}{N} \\
 d I & =\frac{r S I}{N}
 \end{aligned}
-
+$$
 ![可视化展示](/自主学习/传染病/可视化/si.png)
 
 # 2. SIS模型
@@ -35,7 +36,7 @@ r表示一个感染者平均每天感染易感者的人数
 μ表示感染者每天康复的比例
 
 那么每天易感者和感染者的数量变化为
-
+$$
 \begin{aligned}
 d S & =\frac{-r S I}{N} \\
 d I & =\frac{r S I}{N}
@@ -43,12 +44,13 @@ d I & =\frac{r S I}{N}
 d S & =\frac{-r S I}{N}+\mu I \\
 d I & =\frac{r S I}{N}-\mu I
 \end{aligned}
-
+$$
 ![可视化展示](/自主学习/传染病/可视化/sis.png)
+$$
 \begin{aligned}
 I & = N \left( 1 - \frac{M}{r} \right)
 \end{aligned}
-
+$$
 # 3. 基本再生数 basic reproductive number
 这里，从SIS模型中引出了一个概念，就是基本再生数，其定义为：
 
@@ -74,12 +76,14 @@ r表示一个感染者平均每天感染易感者的人数
 μ表示感染者每天康复（含死亡）的比例
 
 那么每天易感者/感染者/康复者的数量变化为:
-
+$$
 \begin{aligned}
 \frac{dS}{dt} & = -\frac{rSI}{N} \\
 \frac{dI}{dt} & = \frac{rSI}{N} - \mu I \\
 \frac{dR}{dt} & = \mu I
 \end{aligned}
+$$
+
 ![可视化展示](/自主学习/传染病/可视化/sir.png)
 
 # 5. SEIR模型
@@ -106,14 +110,14 @@ r表示一个感染者平均每天感染易感者的人数
 μ 表示感染者每天康复（含死亡）的比例
 
 那么每天易感者和感染者的数量变化为
-
+$$
 \begin{aligned}
 \frac{dS}{dt} & = -\frac{rSI}{N} \\
 \frac{dE}{dt} & = \frac{rSI}{N} - \alpha E \\
 \frac{dI}{dt} & = \alpha E - \mu I \\
 \frac{dR}{dt} & = \mu I
 \end{aligned}
-
+$$
 ![可视化展示](/自主学习/传染病/可视化/seir.png)
 
 # 6. SEIJR模型
@@ -146,7 +150,7 @@ r表示一个潜伏者平均每天感染易感者的人数
 τ 表示感染者每天确诊的比例
 
 那么每天易感者和感染者的数量变化为
-
+$$
 \begin{aligned}
 \frac{dS}{dt} & = -\frac{rSE}{N} \\
 \frac{dE}{dt} & = \frac{rSE}{N} - \alpha E - \pi E \\
@@ -154,7 +158,7 @@ r表示一个潜伏者平均每天感染易感者的人数
 \frac{dJ}{dt} & = \pi I \\
 \frac{dR}{dt} & = \pi E + \mu I
 \end{aligned}
-
+$$
 ![可视化展示](/自主学习/传染病/可视化/seijr.png)
 
 # 7. SEIJRD模型
@@ -189,7 +193,7 @@ r表示一个潜伏者平均每天感染易感者的人数
 ω 表示感染者每天死亡的比例
 
 那么每天易感者和感染者的数量变化为
-
+$$
 \begin{aligned}
 \frac{dS}{dt} & = -\frac{rSE}{N} \\
 \frac{dE}{dt} & = \frac{rSE}{N} - \alpha E - \pi E \\
@@ -197,9 +201,8 @@ r表示一个潜伏者平均每天感染易感者的人数
 \frac{dJ}{dt} & = \pi I \\
 \frac{dR}{dt} & = \pi E + \mu I \\
 \frac{dD}{dt} & = \omega I
-
 \end{aligned}
-
+$$
 ![可视化展示](/自主学习/传染病/可视化/武汉疫情.png)
 
 参考文献：https://blog.csdn.net/qq_36714950/article/details/138058867

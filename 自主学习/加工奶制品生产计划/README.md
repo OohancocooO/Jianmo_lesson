@@ -16,12 +16,37 @@
 
 设 x1 表示第一种产品的生产数量，x2 表示第二种产品的生产数量。建立线性回归模型：
 
-目标函数:
-$$\text{max } z = 72x_1 + 64x_2$$
-st. 
-$$x_1 + x_2 \leq 50$$
-$$12x_1 + 18x_2 \leq 480$$
-$$x_1, x_2 \geq 0$$
+max z = 72x_1 + 64x_2
+
+s.t.
+\begin{cases}
+\begin{pmatrix}
+1 & 1 \\
+12 & 8 
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\
+x_2 
+\end{pmatrix}
+\leq
+\begin{pmatrix}
+50 \\
+480 
+\end{pmatrix}
+
+0 \leq
+\begin{pmatrix}
+x_1 \\
+x_2 
+\end{pmatrix}
+\leq
+\begin{pmatrix}
+1000/3 \\
++\infty 
+\end{pmatrix}
+
+\end{cases}
+
 
 编写代码可以得到最优解 x1= 20， x2 = 30，最大的收益为 3360元》
 

@@ -1,0 +1,40 @@
+RX=x1sread（各类每日销售量.xlsx，sheet2'，B2：G1096）
+[R,P]=fun_spearman(RX,1)
+
+function [p]= calculate_p(r,m,kind)
+	z=abs(r）*sqrt(m-1)；%计算检验值
+	p=（1-normcdf(z)）*kind；%计算p值
+end
+
+function [r]=calculate_r(X,Y)
+	RX=rank_data(X)；%计算x的等级
+	RY=rank_data(Y)；%计算Y的等级
+	d=RX-RY:%计算X和Y等级差
+	n=size,(X,1);%计算样本个数n
+	r=1-（6*sum(d.*d)）/（n*(n^2-1));%计算斯皮尔曼相关系数
+end
+
+function[R，P]=fun_spearman(X,kind)
+	if nargin==1%判断用户输入的参数
+		kind = 2;
+	end
+	[m,n]=size(x)；%计算样本个数和指标个数
+	if m < 30%判断是否样本数量
+		disp（'样本个数少于30，请直接查临界值表进行假设检验'）
+	elseif n<2%判断是否指标数太少
+		disp（‘指标个数太少，无法计算）
+	elseif kind~=1&& kind~=2	%判断kind是否为1或者2
+		disp（'kind只能取1或者2'）
+	else
+		R=ones(n)：%初始化R矩阵
+		P=ones(n);%初始化P矩阵
+		for i =1: n
+			for j=(i+1):n
+			r=calculate_r(x(：，i)，x(：，j))%计算i和两列的相关系数r
+			p=calculate_p(r，m，kind)；%计算p值
+			R(i，j）=r；R(j，i）=r；%求得相关系数
+			P(i，j)=p;P(j，i）=p%求得检验p值
+			end
+		end
+	end
+end

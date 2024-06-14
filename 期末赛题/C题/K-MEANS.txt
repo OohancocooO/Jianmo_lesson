@@ -1,0 +1,37 @@
+X=xlsread（单品蔬菜统计特征数据.xlsx'，sheet1'，B2:D141）；
+%聚类种类
+K=4;
+max_iters =20;
+centroids=init_centroids(X,K);
+%送代更新簇分配和簇质心
+for i = 1:max iters
+%簇分配
+	labels =assign_labels(X,centroids);
+%更新簇质心
+	centroids=update_centroids(X,labels,K):
+end
+%簇分配函数
+function labels = assign_labels(X, centroids)
+	[~,labels]=min(pdist2(X,centroids,squaredeuclidean'),[],2);
+end
+
+%初始化簇质心函数
+function centroids=init_centroids(X,K)
+%随机选择一个数据点作为第一个质心
+	centroids = x(randperm(size(X,1), 1), :);
+%选择剩余的质心
+	for i = 2:
+		D=pdist2(x,centroids,sguaredeuclidean)
+		D = min(D,【],2);
+		D = D / sum(D);
+		centroids(i, :)= x(find(rand < cumsum(D),1), :);
+	end
+end
+
+%更新簇质心函数
+function centroids = update centroids(X, labels, K)
+	centroids =zeros(K,size(X,2));
+	for i= l:k
+		centroids(i,:)=mean(x(labels == i,:),1);
+	end
+	end

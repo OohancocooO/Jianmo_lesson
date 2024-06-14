@@ -1,0 +1,27 @@
+Test=xlsread（六大蔬菜品类销售量与成本加成定价.x1sx，sheet1，B3：Mie97）
+%%计算各列之间的相关系数以及P值
+[R,P]=corrcoef(Test);
+%用循环检验所有列的数据的正态分布性
+n_c=size(Test,2)；%numberofcolumn数据的列数
+H=zeros（1,n_c）;%初始化节省时间和消耗
+P=zeros(1,n_c）;%计算所得检验p值
+for i =1:n_c
+[h,p] =jbtest(Test(:,i),e.ei);
+H(i)=h;
+P(i)=p;
+end
+disp(H)
+disp(P)
+%检验相关系数m
+r=0.5
+n=input（请输入样本数量：）
+alpha=input（请输入建设检验判断值：）
+t=r*(((n-2)/(1-r^2))^0.5);%n为样本数量
+p=(1-tcdf(t,n-2))*2;%此时的t为输入n后求得的t值，p即为求得的检验值
+disp(检验相关洗激得到的p值为："）
+disp(p)
+if p<alpha
+disp（拒绝原假设，相关系数显著不等于e）
+else
+disp接受原假设，相关系数显著等于e'）
+end

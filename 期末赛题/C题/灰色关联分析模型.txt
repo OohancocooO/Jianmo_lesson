@@ -1,0 +1,33 @@
+clear;clc
+%load gdp.mat %导入数据一个6*4的矩阵
+data=zeros(12,4,6):
+data(:,:,1)=xlsread（'六大蔬菜品类与其节日、节气和季度蔬菜丰富度指标.xlsx'，'花菜类',"B2:E13');
+data(:,:,2)=xlsread(六大蔬菜品类与其节日、节气和季度蔬菜丰富度指标.x1sx，食用菌,"B2:E13");
+data(:,:,3)=x1sread（六大蔬菜品类与其节日、节气和季度蔬菜丰富度指标.x1sx，花叶类,"B2:E13");
+data(:,:,4)=x1sread(六大蔬菜品类与其节日、节气和季度蔬菜丰富度指标.x1sx"，辣椒类,"B2:E13");
+data(：，:,5)=xlsread（六大蔬菜品类与其节日、节气和季度蔬菜丰富度指标.xlsx，茄类,"B2:E13");
+data(：，：,6)=x1sread（六大蔬菜品类与其节日、节气和季度蔬菜丰富度指标.x1sx，水生根茎类，'B2:E13');
+for i=1:6
+	Mean=mean(data(:，：，i))；%求出每一列的均值以供后续的数据预处理
+	data(:,:,i) = data(:,:,i) ./ repmat(Mean,size(data(:,:,i),1),1);
+	Y = data(:,1,i); % 母序列
+	x=data(:,2:end,i)；%子序列
+	absx0_xi =abs(x-repmat(Y,1,size(X,2))); %计算|xe-Xi|矩阵
+	a=min(min(absxe_xi));%计算两级最小差a
+	b=max(max(absxe_xi))；%计算两级最大差b
+	rho=0.5；%分辨系数取0.5
+	gamma=（a+rho*b）./（absxe_xi+rho*b)；%计算各指标与母序列的关联系数
+	disp(子序列中各个指标的灰色关联度分别为：）
+	disp(mean(gamma))
+	x=1:12;
+	figure(i)
+	hold on
+	plot(x,data(:,1,i),k,Linewidth',1)
+	plot(x,data(:,2,i),r,Linewidth,1)
+	plot(x,data(:,3,i),'b,Linewidth,1)
+	plot(x,data(:,4,i),g，Linewidth，1)
+	set(gca,'linewidth',1)
+	set(gca,Box'，‘on')
+end
+
+牛在

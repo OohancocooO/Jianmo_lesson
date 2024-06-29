@@ -1,6 +1,9 @@
 # Jianmo_lesson
 数学建模课程小组作业
 
+> [!CAUTION]
+> 本企划已经结束，理论上不会再更改。如有问题欢迎发Email，Email的链接在个人主页处
+
 ## 题目列表
 1. 回归方程-土豆生菜 [土豆生菜项目介绍](/土豆生菜/README.md)
 
@@ -26,3 +29,9 @@
 6. 期末作业C题 [期末作业C题](/期末赛题/README.md)
 >- [x] 布置时间   *[2024/06/01]*   
 >- [x] 汇报时间   *[2024/06/29]*
+
+## 感谢以下同学的帮忙!!!!!
+
+<a href="https://github.com/OohancocooO/Jianmo_lesson/graphs/contributors" target="_blank">
+  <img src="https://contrib.rocks/image?repo=OohancocooO/Jianmo_lesson" />
+</a>
